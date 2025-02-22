@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  oneapi-service:
+    container_name: oneapi-service
+    restart: always
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: oneapi-service:v3
+    ports:
+      - "18500:5800"
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=password
+      - DB_NAME=oneapi
+      - DB_PORT=3306
+      - TOKEN_NAME=oneapi-token
+
+networks:
+  default:
+    name: network
