@@ -24,7 +24,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def main(sql: str, serv: str) -> dict:
+def query(sql: str, serv: str) -> dict:
     try:
         logger.debug(f"开始查询，SQL: {sql}")
         logger.debug(f"服务器地址: {serv}")
