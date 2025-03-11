@@ -1,6 +1,6 @@
 import unittest
 import logging
-from sql_query import Function
+from sql_query import query
 
 # 配置日志
 logging.basicConfig(
@@ -13,8 +13,8 @@ class TestFunction:
     def __init__(self):
         """初始化测试环境"""
         self.sql = "SELECT models FROM table WHERE name ='oneapi-token'"
-        self.server = "http://IP:PORT"
-        self.function = Function()
+        self.server = "https://xxx/oneapi"
+        # self.function = query(self.sql, self.server)
 
     def test_query(self):
         """测试SQL查询功能"""
